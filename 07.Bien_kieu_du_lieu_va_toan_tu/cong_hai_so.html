@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Số A: <input type="number" id="so_a"/>
+    <br>
+    Số B: <input type="number" id="so_b"/>
+    <br>
+    <input type="button" id="thuc_hien_cong" value="cộng"/>   
+    <input type="button" id="thuc_hien_tru" value="trừ"/>   
+    <input type="button" id="thuc_hien_nhan" value="nhân"/>   
+    <input type="button" id="thuc_hien_chia" value="chia"/> <br>
+    <table border="1"; style="width: 5.8cm; height:0.9cm;">
+        <tr>
+            <td id="ket_qua"></td>
+        </tr>
+    </table>
+    <script>
+        let nut_cong = document.getElementById('thuc_hien_cong');
+        nut_cong.addEventListener('click',function(){
+           let gia_tri_so_a = document.getElementById("so_a").value;
+           let gia_tri_so_b = document.getElementById("so_b").value;
+
+            gia_tri_so_a = parseInt(gia_tri_so_a);
+            gia_tri_so_b = parseInt(gia_tri_so_b);
+
+                let tong_ab = gia_tri_so_a + gia_tri_so_b;
+
+                    let ket_qua = document.getElementById('ket_qua');
+                    ket_qua.innerText = 'Kết quả là:' + tong_ab;
+
+	                    });
+            let nut_tru = document.getElementById('thuc_hien_tru');
+            nut_tru.addEventListener('click',function(){
+                let gia_tri_so_a = document.getElementById("so_a").value;
+                let gia_tri_so_b = document.getElementById("so_b").value;
+                
+                    gia_tri_so_a = parseInt(gia_tri_so_a);
+                    gia_tri_so_b = parseInt(gia_tri_so_b);
+
+                        let hieu_ab = gia_tri_so_a - gia_tri_so_b;
+
+                            let ket_qua = document.getElementById('ket_qua');
+                            ket_qua.innerText = 'Kết quả là:' + hieu_ab;
+
+                                });
+                let nut_nhan = document.getElementById('thuc_hien_nhan');
+                nut_nhan.addEventListener('click',function(){
+                    let gia_tri_so_a = document.getElementById("so_a").value;
+                    let gia_tri_so_b = document.getElementById("so_b").value;
+                    
+                        gia_tri_so_a = parseInt(gia_tri_so_a);
+                        gia_tri_so_b = parseInt(gia_tri_so_b);
+
+                            let tich_ab = gia_tri_so_a * gia_tri_so_b;
+
+                                let ket_qua = document.getElementById('ket_qua');
+                                ket_qua.innerText = 'Kết quả là:' + tich_ab;
+                })
+                    let nut_chia = document.getElementById('thuc_hien_chia');
+                    nut_chia.addEventListener('click',function(){
+                        let gia_tri_so_a = document.getElementById("so_a").value;
+                        let gia_tri_so_b = document.getElementById("so_b").value;
+
+                            gia_tri_so_a = parseInt(gia_tri_so_a);
+                            gia_tri_so_b = parseInt(gia_tri_so_b);
+
+                              let thuong_ab = gia_tri_so_a / gia_tri_so_b;
+
+                                let ket_qua = document.getElementById('ket_qua');
+                                ket_qua.innerText = 'Kết quả là:' + thuong_ab;
+                    })
+    </script>
+</body>
+</html>

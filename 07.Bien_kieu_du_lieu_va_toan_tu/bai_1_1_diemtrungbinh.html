@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+      <table border="1">
+        <tr>
+            <td>Vật Lý</td>
+            <td style="width:2cm;"><input type="number" id="Ly"/></td>
+        </tr>
+        <tr>
+            <td>Hóa học</td>
+            <td style="width:2cm;"><input type="number" id="Hoa"/></td>
+        </tr>
+        <tr>
+            <td>Sinh học</td>
+            <td style="width:2cm;"><input type="number" id="Sinh"/></td>
+        </tr>
+        <tr>
+            <td>Trung bình</td>
+            <td id="Trung_binh"></td>
+        </tr>
+        <tr>
+            <td>Tổng</td>
+            <td id="Tong"></td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" id="Tinh_trung_binh" value="Trung bình"/>
+    <input type="button" id="Tinh_tong" value="Tổng"/>
+    <input type="reset" value="Nhập lại"/>
+    <script>
+        let trung_binh = document.getElementById("Tinh_trung_binh");
+        trung_binh.addEventListener('click', function(){
+            let diem_ly = document.getElementById("Ly").value;
+            let diem_hoa = document.getElementById("Hoa").value;
+            let diem_sinh = document.getElementById("Sinh").value;
+               
+              diem_ly = parseInt(diem_ly);
+              diem_hoa = parseInt(diem_hoa);
+              diem_sinh = parseInt(diem_sinh);
+
+                let TB = (diem_ly + diem_hoa + diem_sinh)/3;
+                 
+                let Trung_binh = document.getElementById('Trung_binh');
+                            Trung_binh.innerText = TB;
+        })
+        let Tong = document.getElementById("Tinh_tong");
+        Tong.addEventListener('click', function(){
+            let diem_ly = document.getElementById("Ly").value;
+            let diem_hoa = document.getElementById("Hoa").value;
+            let diem_sinh = document.getElementById("Sinh").value;
+               
+              diem_ly = parseInt(diem_ly);
+              diem_hoa = parseInt(diem_hoa);
+              diem_sinh = parseInt(diem_sinh);
+
+                let SUM = diem_ly + diem_hoa + diem_sinh;
+                 
+                let Tong = document.getElementById('Tong');
+                            Tong.innerText = SUM;
+        })
+        /*
+        id: Ly đc add vào getelementById, Hoa, Sinh cũng như vậy
+        id Trung Bình
+        */
+      </script>
+    </form>
+</body>
+</html>

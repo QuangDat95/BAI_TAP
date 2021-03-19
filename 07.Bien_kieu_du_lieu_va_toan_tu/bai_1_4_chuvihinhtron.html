@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Nhập R</td>
+            <td><input type="number" id="ban_kinh"/></td>
+        </tr>
+        <tr>
+            <td>Tính P</td>
+            <td id="ket_qua"></td>
+        </tr>
+    </table> <br>
+     <input type="button" id="tinh_P" value="Kết quả"/>
+     <script>
+         PI=3.14;
+         let nut_chu_vi = document.getElementById("tinh_P");
+         nut_chu_vi.addEventListener('click',function(){
+             let giatri_R = document.getElementById("ban_kinh").value;
+             giatri_R = parseInt(giatri_R);
+             let tinh_chuvi = 2*PI*giatri_R;
+             let ket_qua = document.getElementById('ket_qua');
+                    ket_qua.innerText = tinh_chuvi;
+         })
+     </script>
+</body>
+</html>
