@@ -7,9 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <table border="1">
+    <form>
+      <table border="1">
         <tr>
-            <td>Vật lý</td>
+            <td>Vật Lý</td>
             <td style="width:2cm;"><input type="number" id="Ly"/></td>
         </tr>
         <tr>
@@ -32,6 +33,7 @@
     <br>
     <input type="button" id="Tinh_trung_binh" value="Trung bình"/>
     <input type="button" id="Tinh_tong" value="Tổng"/>
+    <input type="reset" value="Nhập lại"/>
     <script>
         let trung_binh = document.getElementById("Tinh_trung_binh");
         trung_binh.addEventListener('click', function(){
@@ -63,6 +65,11 @@
                 let Tong = document.getElementById('Tong');
                             Tong.innerText = SUM;
         })
-    </script>
+        /*
+        id: Ly đc add vào getelementById, Hoa, Sinh cũng như vậy
+        id Trung Bình
+        */
+      </script>
+    </form>
 </body>
 </html>
