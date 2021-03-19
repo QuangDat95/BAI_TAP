@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Độ C</td>
+            <td><input type="number" id="do_C"/></td>
+        </tr>
+        <tr>
+            <td>Độ F</td>
+            <td id="ket_qua"></td>
+        </tr>
+    </table>
+    <input type="button" id="doC_doF" value="Kết quả"/>
+    <script>
+        let ch_doi_CF = document.getElementById("doC_doF");
+        ch_doi_CF.addEventListener('click',function(){
+            let F = document.getElementById('do_C').value;
+            let C =  ((F - 32) * 5 / 9);
+             
+               gia_tri_C = parseInt(gia_tri_C);
+                 
+               let ket_qua = document.getElementById("ket_qua_C");
+                    ket_qua.innerText = C;
+        })
+    </script>
+</body>
+</html>
