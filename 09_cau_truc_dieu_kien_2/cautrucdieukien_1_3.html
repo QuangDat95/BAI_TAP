@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xét số nguyên</title>
+</head>
+<body>
+    <input type="number" id="nhap_so"/>
+    <input type="button" id="Kiem_tra" value="Kiểm tra"/>
+    <p id="Ket_qua"></p>
+    <script>
+        let nut_kiem_tra = document.getElementById("Kiem_tra");
+        let Ket_qua = document.getElementById("Ket_qua");
+        nut_kiem_tra.addEventListener('click',function(){
+            let gia_tri_nhap = document.getElementById('nhap_so').value;
+            gia_tri_nhap = parseInt(gia_tri_nhap);
+
+            if(gia_tri_nhap > 0){
+                    Ket_qua.innerHTML = "Đây là số nguyên lớn hơn 0";
+                }
+                else if(gia_tri_nhap < 0)
+                {
+                    Ket_qua.innerHTML ="Đây là số nguyên nhỏ hơn 0";
+                }
+        })
+    </script>
+</body>
+</html>
