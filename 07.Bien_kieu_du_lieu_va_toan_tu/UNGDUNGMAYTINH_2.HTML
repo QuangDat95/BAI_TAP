@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        #td01 {
+            border-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td colspan="7" style="height:0.7cm; width:9cm;"><p id="ky_tu"></p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="7" style="height:0.8cm; width:9cm;">
+                                <table border="1">
+                                    <tr>
+                                        <td style="width:8.9cm;height: 0.7cm;">
+                                            <p style="text-align: right;" id="ket_qua"></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center"></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button" id="so_7"
+                                    value="7" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button" id="so_8"
+                                    value="8" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button" id="so_9"
+                                    value="9" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: dimgrey;" type="button"
+                                    id="phim_cong" value="+" /></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: dimgrey;" type="button"
+                                    id="phim_mo_ngoac" value="("/></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button" id="so_4"
+                                    value="4" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button" id="so_5"
+                                    value="5" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button" id="so_6"
+                                    value="6" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: dimgrey;" type="button"
+                                    id="phim_tru" value="-" /></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: dimgrey;" type="button"
+                                    id="phim_dong_ngoac" value=")" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button" id="so_1"
+                                    value="1" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button" id="so_2"
+                                    value="2" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button" id="so_3"
+                                    value="3" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: dimgrey;" type="button"
+                                    id="phim_nhan" value="X" /></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: dimgrey;" type="button"
+                                    id="phim_can_bac_2" value="√x" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button"
+                                    id="dau_cham" value="." /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: white;" type="button" id="so_0"
+                                    value="0" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color:dodgerblue; color: white;"
+                                    type="button" id="phim_bang" value="=" /></td>
+                            <td style="text-align: center;"><input
+                                    style="height:0.7cm;width:1.6cm; background-color: dimgrey;" type="button"
+                                    id="phim_chia" value="/" /></td>
+                        </tr>
+                    </table>
+                    <script>
+                        let ket_qua = document.getElementById("ket_qua");
+                        let nut_so_0 = document.getElementById("so_0");
+                        nut_so_0.addEventListener('click', function () {
+                            let gia_tri_0 = +document.getElementById("so_0").value;
+                            ky_tu.innerText += gia_tri_0;
+                        })
+                        let nut_so_1 = document.getElementById("so_1");
+                        nut_so_1.addEventListener('click', function () {
+                            let gia_tri_1 = +document.getElementById("so_1").value;
+                            ky_tu.innerText += gia_tri_1;
+                        })
+                        let nut_so_2 = document.getElementById("so_2");
+                        nut_so_2.addEventListener('click', function () {
+                            let gia_tri_2 = +document.getElementById("so_2").value;
+                            ky_tu.innerText += gia_tri_2;
+                        })
+                        let nut_so_3 = document.getElementById("so_3");
+                        nut_so_3.addEventListener('click', function () {
+                            let gia_tri_3 = +document.getElementById("so_3").value;
+                            ky_tu.innerText += gia_tri_3;
+                        })
+                        let nut_so_4 = document.getElementById("so_4");
+                        nut_so_4.addEventListener('click', function () {
+                            let gia_tri_4 = +document.getElementById("so_4").value;
+                            ky_tu.innerText += gia_tri_4;
+                        })
+                        let nut_so_5 = document.getElementById("so_5");
+                        nut_so_5.addEventListener('click', function () {
+                            let gia_tri_5 = +document.getElementById("so_5").value;
+                            ky_tu.innerText += gia_tri_5;
+                        })
+                        let nut_so_6 = document.getElementById("so_6");
+                        nut_so_6.addEventListener('click', function () {
+                            let gia_tri_6 = +document.getElementById("so_6").value;
+                            ky_tu.innerText += gia_tri_6;
+                        })
+                        let nut_so_7 = document.getElementById("so_7");
+                        nut_so_7.addEventListener('click', function () {
+                            let gia_tri_7 = +document.getElementById("so_7").value;
+                            ky_tu.innerText += gia_tri_7;
+                        })
+                        let nut_so_8 = document.getElementById("so_8");
+                        nut_so_8.addEventListener('click', function () {
+                            let gia_tri_8 = +document.getElementById("so_8").value;
+                            ky_tu.innerText += gia_tri_8;
+                        })
+                        let nut_so_9 = document.getElementById("so_9");
+                        nut_so_9.addEventListener('click', function () {
+                            let gia_tri_9 = +document.getElementById("so_9").value;
+                            ky_tu.innerText += gia_tri_9;
+                        })
+                        let nut_cong = document.getElementById("phim_cong");
+                        nut_cong.addEventListener('click', function () {
+                            let ky_tu_cong = +document.getElementById("phim_cong").value;
+                            ky_tu.innerText += "+";
+                        })
+                        let nut_tru = document.getElementById("phim_tru");
+                        nut_tru.addEventListener('click', function () {
+                            let ky_tu_tru = +document.getElementById("phim_tru").value;
+                            ky_tu.innerText += "-";
+                        })
+                        let nut_nhan = document.getElementById("phim_nhan");
+                        nut_nhan.addEventListener('click', function () {
+                            let ky_tu_nhan = +document.getElementById("phim_nhan").value;
+                            ky_tu.innerText += "*";
+                        })
+                        let nut_chia = document.getElementById("phim_chia");
+                        nut_chia.addEventListener('click', function () {
+                            let ky_tu_chia = +document.getElementById("phim_chia").value;
+                            ky_tu.innerText += "/";
+                        })
+                        let nut_cham = document.getElementById("dau_cham");
+                        nut_cham.addEventListener('click', function () {
+                            let ky_tu_cham = +document.getElementById("dau_cham").value;
+                            ky_tu.innerText += ".";
+                        })
+                        let nut_mo_ngoac = document.getElementById("phim_mo_ngoac");
+                        nut_mo_ngoac.addEventListener('click', function () {
+                            let ky_tu_mo = document.getElementById("phim_mo_ngoac").value;
+                            ky_tu.innerText += "(";
+                        })
+                        let nut_dong_ngoac = document.getElementById("phim_dong_ngoac");
+                        nut_dong_ngoac.addEventListener('click', function () {
+                            let ky_tu_dong = document.getElementById("phim_dong_ngoac").value;
+                            ky_tu.innerText += ")";
+                        })
+                        let nut_can_2 = document.getElementById("phim_can_bac_2");
+                        nut_can_2.addEventListener('click', function () {
+                            let ky_tu_can_2 = document.getElementById("phim_can_bac_2").value;
+                            ky_tu.innerText += sqrt(ky_tu.innerText);
+                        })
+                        let nut_bang = document.getElementById("phim_bang");
+                        nut_bang.addEventListener('click', function () {
+                            let ket_qua_tinh = +document.getElementById("phim_bang").value;
+                            ket_qua.innerText = eval(ky_tu.innerText);
+                        })
+                    </script>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

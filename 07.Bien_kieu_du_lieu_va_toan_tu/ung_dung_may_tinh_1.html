@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcualtor 1</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="so_a"/>
+        <input type="number" id="so_b"/>
+        <br>
+        <br>
+        <input type="button" id="phep_cong" value="Addition(+)"/>
+        <input type="button" id="phep_tru" value="Subtraction(-)"/>
+        <input type="button" id="phep_nhan" value="Multiplication(X)"/>
+        <input type="button" id="phep_chia" value="Division"/>
+        <br>
+        <br>
+        <p id="ket_qua"></p>
+        <script>
+             let nut_cong = document.getElementById('phep_cong');
+             nut_cong.addEventListener('click',function(){
+                 let gia_tri_a = document.getElementById("so_a").value;
+                 let gia_tri_b = document.getElementById("so_b").value;
+
+                 gia_tri_a = parseInt(gia_tri_a);
+                 gia_tri_b = parseInt(gia_tri_b);
+
+                let Tong_2 = gia_tri_a + gia_tri_b;
+                let kq = document.getElementById("ket_qua");
+                    ket_qua.innerText = 'Kết quả là:' + Tong_2;
+             });
+             let nut_tru = document.getElementById('phep_tru');
+             nut_tru.addEventListener('click',function(){
+                 let gia_tri_a = document.getElementById("so_a").value;
+                 let gia_tri_b = document.getElementById("so_b").value;
+
+                 gia_tri_a = parseInt(gia_tri_a);
+                 gia_tri_b = parseInt(gia_tri_b);
+
+                let Hieu_2 = gia_tri_a - gia_tri_b;
+                let kq = document.getElementById("ket_qua");
+                    ket_qua.innerText = 'Kết quả là:' + Hieu_2;
+             });
+             let nut_nhan = document.getElementById('phep_nhan');
+             nut_nhan.addEventListener('click',function(){
+                let gia_tri_a = document.getElementById("so_a").value;
+                let gia_tri_b = document.getElementById("so_b").value;
+
+                gia_tri_a = parseInt(gia_tri_a);
+                 gia_tri_b = parseInt(gia_tri_b);
+
+                let Tich_2 = gia_tri_a * gia_tri_b;
+                let kq = document.getElementById("ket_qua");
+                    ket_qua.innerText = 'Kết quả là:' + Tich_2;
+             });
+             let nut_chia = document.getElementById('phep_chia');
+             nut_chia.addEventListener('click',function(){
+                let gia_tri_a = document.getElementById("so_a").value;
+                let gia_tri_b = document.getElementById("so_b").value;
+
+                gia_tri_a = parseInt(gia_tri_a);
+                gia_tri_b = parseInt(gia_tri_b);
+
+                let Thuong_2 = gia_tri_a / gia_tri_b;
+                let kq = document.getElementById("ket_qua");
+                ket_qua.innerText = 'Kết quả là:' + Thuong_2;
+             });
+        </script>
+    </form>
+</body>
+</html>
