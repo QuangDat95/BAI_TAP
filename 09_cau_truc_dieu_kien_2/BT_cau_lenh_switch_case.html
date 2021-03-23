@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tháng có bao nhiêu ngày?</title>
+</head>
+<body>
+    <input type="number" id="so_thang"/> <input type="button" id="so_ngay" value="Tính số ngày"/>
+    <br>
+   <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        tinh_so_ngay = document.getElementById("so_ngay");
+        tinh_so_ngay.addEventListener('click',function(){
+            let so_ngay_thang = +document.getElementById("so_thang").value;
+            switch (so_ngay_thang){
+                case 2:
+                    ket_qua.innerText = 'Tháng 2 có 28 hoặc 29 ngày';
+                    break;
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                ket_qua.innerText = 'Tháng ' + so_ngay_thang + ' có 31 ngày';
+                break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                ket_qua.innerText = 'Tháng ' + so_ngay_thang + ' có 30 ngày';
+            }   
+        })
+    </script>
+</body>
+</html>
