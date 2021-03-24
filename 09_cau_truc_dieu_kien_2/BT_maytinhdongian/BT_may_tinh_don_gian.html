@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính đơn giản</title>
+    <style>
+        table{
+            border-color: red;
+            border-style:inherit;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+
+        input {
+            width: 45px;
+            height: 45px;
+            color: blue;
+            font-style: italic;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td colspan="4">
+                            <table border="1">
+                                <tr>
+                                    <td style="text-align: right; width:200px; color: blue; font-family: Arial, Helvetica, sans-serif;"><p id="ket_qua"></p></td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" id="so_1" value="1" /></td>
+                        <td><input type="button" id="so_2" value="2" /></td>
+                        <td><input type="button" id="so_3" value="3" /></td>
+                        <td><input type="button" id="dau_cong" value="+" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" id="so_4" value="4" /></td>
+                        <td><input type="button" id="so_5" value="5" /></td>
+                        <td><input type="button" id="so_6" value="6" /></td>
+                        <td><input type="button" id="dau_tru" value="-" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" id="so_7" value="7" /></td>
+                        <td><input type="button" id="so_8" value="8" /></td>
+                        <td><input type="button" id="so_9" value="9" /></td>
+                        <td><input type="button" id="dau_nhan" value="*" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="reset" id="nut_AC" value="C" /></td>
+                        <td><input type="button" id="so_0" value="0" /></td>
+                        <td><input type="button" id="dau_bang" value="=" /></td>
+                        <td><input type="button" id="dau_chia" value="/" /></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="maytinhdongian.js"></script>
+</body>
+
+</html>
