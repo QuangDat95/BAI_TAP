@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Tính giá điện sinh hoạt</title>
+</head>
+
+<body>
+    <p>Nhập số kwh điện sinh hoạt</p>
+    <input type="number" id="so_kwh" />
+    <input type="button" id="nut_kq" value="Kết quả" />
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let nut_ket_qua = document.getElementById("nut_kq");
+        nut_ket_qua.addEventListener('click', function () {
+            let nhap_so_kwh = +document.getElementById("so_kwh").value;
+            if (nhap_so_kwh > 0 && nhap_so_kwh <= 50) {
+                ket_qua.innerText = "Số tiền là: " + (nhap_so_kwh * 1549) + " đồng";
+            }
+            else if (nhap_so_kwh >= 51 && nhap_so_kwh <= 100) {
+                ket_qua.innerText = "Số tiền là: " + ((nhap_so_kwh - 50) * 1600 + 50 * 1549) + " đồng";
+            }
+            else if (nhap_so_kwh >= 101 && nhap_so_kwh <= 200) {
+                ket_qua.innerText = "Số tiền là: " + ((nhap_so_kwh - 100) * 1858 + 50 * 1600 + 50 * 1549) + " đồng";
+            }
+            else if (nhap_so_kwh >= 201 && nhap_so_kwh <= 300) {
+                ket_qua.innerText = "Số tiền là: " + ((nhap_so_kwh - 200) * 2340 + 100 * 1858 + 50 * 1600 + 50 * 1549) + " đồng";
+            }
+            else if (nhap_so_kwh >= 301 && nhap_so_kwh <= 400) {
+                ket_qua.innerText = "Số tiền là: " + ((nhap_so_kwh - 300) * 2615 + 100 * 2340 + 100 * 1858 + 50 * 1600 + 50 * 1549) + " đồng";
+            }
+            else if (nhap_so_kwh >= 401) {
+                ket_qua.innerText = "Số tiền là: " + ((nhap_so_kwh - 400) * 2701 + 100 * 2615 + 100 * 2340 + 100 * 1858 + 50 * 1600 + 50 * 1549) + " đồng";
+            }
+        })
+    </script>
+</body>
+
+</html>

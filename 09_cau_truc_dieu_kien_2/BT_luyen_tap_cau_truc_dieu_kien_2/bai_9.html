@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra 3 số a,b,c có phải 3 cạnh tam giác</title>
+</head>
+
+<body>
+    <p>Nhập vào số a:</p>
+    <input type="number" id="nhap_a" />
+    <p>Nhập vào số b:</p>
+    <input type="number" id="nhap_b" />
+    <p>Nhập vào số c:</p>
+    <input type="number" id="nhap_c" />
+    <input type="button" id="nut_kt" value="Kết quả" />
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let nhan_kt = document.getElementById("nut_kt");
+        nhan_kt.addEventListener('click', function () {
+            let Nhap_a = +document.getElementById("nhap_a").value;
+            let Nhap_b = +document.getElementById("nhap_b").value;
+            let Nhap_c = +document.getElementById("nhap_c").value;
+
+            if (Nhap_a > 0 && Nhap_b > 0 && Nhap_c > 0) {
+                if (Nhap_a + Nhap_b > Nhap_c) {
+                    if (Nhap_b + Nhap_c > Nhap_a) {
+                        if (Nhap_a + Nhap_c > Nhap_b) {
+                            ket_qua.innerText = "3 số là 3 cạnh của 1 tam giác";
+                        }
+                        else {
+                            ket_qua.innerText = "3 số không phải là 3 cạnh của 1 tam giác";
+                        }
+                    }
+                    else {
+                        ket_qua.innerText = "3 số không phải là 3 cạnh của 1 tam giác";
+                    }
+                }
+                else {
+                    ket_qua.innerText = "3 số không phải là 3 cạnh của 1 tam giác";
+                }
+            }
+            else {
+                ket_qua.innerText = "3 số không phải là 3 cạnh của 1 tam giác";
+            }
+        })
+    </script>
+</body>
+
+</html>

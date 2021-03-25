@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số tuổi</title>
+</head>
+
+<body>
+    <p>Nhập số ngẫu nhiên</p>
+    <input type="number" id="so_tuoi" />
+    <input type="button" id="kiem_tra" value="Kết quả" />
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let nut_kt = document.getElementById("kiem_tra");
+        nut_kt.addEventListener('click', function () {
+            let gtr_tuoi = +document.getElementById("so_tuoi").value;
+            if (gtr_tuoi > 0 && gtr_tuoi < 120) {
+                ket_qua.innerText = "Đây là tuổi của 1 người";
+            }
+            else {
+                ket_qua.innerText = "Đây không phải tuổi của 1 người";
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính diện tích tam giác vuông</title>
+</head>
+<body>
+    <p>Nhập vào cạnh a</p>
+    <input type="number" id="nhap_a"/>
+    <p>Nhập vào cạnh b</p>
+    <input type="number" id="nhap_b"/>
+    <input type="button" id="nut_kq" value="Kết quả"/>
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let nut_nhan_kq = document.getElementById("nut_kq");
+        nut_nhan_kq.addEventListener('click', function(){
+            let nhap_canh_a = +document.getElementById("nhap_a").value;
+            let nhap_canh_b = +document.getElementById("nhap_b").value;
+             kq = (nhap_canh_a*nhap_canh_b)/2;
+             ket_qua.innerText = "Kết quả là: " + kq;
+        })
+    </script>
+</body>
+</html>

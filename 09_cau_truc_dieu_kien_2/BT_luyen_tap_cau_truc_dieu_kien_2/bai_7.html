@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+</head>
+
+<body>
+    <p>Nhập vào a:</p>
+    <input type="number" id="nhap_a" />
+    <p>Nhập vào b:</p>
+    <input type="number" id="nhap_b" />
+    <p>Nhập vào c:</p>
+    <input type="number" id="nhap_c" />
+    <input type="button" id="nut_kq" value="Kết quả" />
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let nut_ketqua = document.getElementById("nut_kq");
+        nut_ketqua.addEventListener('click', function () {
+
+            let gtr_a = +document.getElementById("nhap_a").value;
+            let gtr_b = +document.getElementById("nhap_b").value;
+            let gtr_c = +document.getElementById("nhap_c").value;
+            let delta = (gtr_b * gtr_b) - 4 * gtr_a * gtr_c;
+            if (delta < 0)
+            {
+                ket_qua.innerText = "Phương trình vô nghiệm";
+            }
+            else if(delta == 0)
+            {
+                ket_qua.innerText = "Phương trình có nghiệm kép là: x1 = x2 = " + (-gtr_b/(2*gtr_a)); 
+            }
+            else if(delta > 0)
+            {
+                ket_qua.innerText = "Phương trình có 2 nghiệm x1 = " + (-gtr_b+Math.sqrt(delta))/(2*gtr_a) + " và x2 = " + (-gtr_b-Math.sqrt(delta))/(2*gtr_a);
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải PT bậc 1</title>
+</head>
+
+<body>
+    <p>Nhập vào a</p>
+    <input type="number" id="nhap_a" />
+    <p>Nhập vào b</p>
+    <input type="number" id="nhap_b" />
+    <input type="button" id="nut_kq" value="Kết quả" />
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let nut_ket_qua = document.getElementById("nut_kq");
+        nut_ket_qua.addEventListener('click', function () {
+            let nhap_vao_a = +document.getElementById('nhap_a').value;
+            let nhap_vao_b = +document.getElementById('nhap_b').value;
+
+            if (nhap_vao_a == 0) {
+                if (nhap_vao_b == 0) {
+                    ket_qua.innerText = "Phương trình có vô số nghiệm";
+                }
+                else if (nhap_vao_b != 0) {
+                    ket_qua.innerText = "Phương trình vô nghiệm";
+                }
+            }
+            else if (nhap_vao_a != 0) {
+                ket_qua.innerText = "Phương trình có nghiệm là x = " + (-nhap_vao_b / nhap_vao_a);
+            }
+        })
+    </script>
+</body>
+
+</html>

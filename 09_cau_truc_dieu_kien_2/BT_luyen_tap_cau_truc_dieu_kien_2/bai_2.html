@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mét sang Feet</title>
+</head>
+<body>
+    <h3>Nhập vào độ dài (mét)</h3>
+    <input type="number" id="nhap_m"/>
+    <input type="button" id="nhan_ket_qua" value="Kết quả"/>
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let nut_ket_qua = document.getElementById("nhan_ket_qua");
+        nut_ket_qua.addEventListener('click', function(){
+           let nhap_vao_m = +document.getElementById("nhap_m").value;
+            ket_qua_feet = nhap_vao_m * 3.2808;
+            ket_qua.innerText = "Kết quả là " + ket_qua_feet + " feet";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoC-DoF</title>
+</head>
+<body>
+    <p>Nhập độ C</p>
+    <input type="number" id="Do_C"/>
+    <input type="button" id="nut_kq" value="Kết quả"/>
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let nhan_nut_kq = document.getElementById("nut_kq");
+        nhan_nut_kq.addEventListener('click', function(){
+            let nhap_do_C = +document.getElementById("Do_C").value;
+            ket_qua_F = (nhap_do_C*1.8) + 32;
+            ket_qua.innerText = "Kết quả là: " + ket_qua_F + " Độ F"
+        })
+    </script>
+</body>
+</html>
