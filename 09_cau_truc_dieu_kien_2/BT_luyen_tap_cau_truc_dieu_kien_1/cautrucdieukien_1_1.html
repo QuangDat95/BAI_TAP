@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra 2 số</title>
+</head>
+<body>
+    <input type="number" id="so_a"/>
+    <input type="number" id="so_b"/>
+    <input type="button" id="kiem_tra" value="Kiểm tra"/>
+    <br>
+    <p id="ket_qua"></p>
+    <script>
+        let nut_kiem_tra = document.getElementById('kiem_tra');
+        let ket_qua = document.getElementById("ket_qua");
+        nut_kiem_tra.addEventListener('click',function(){
+        let gia_tri_a = document.getElementById("so_a").value;
+        let gia_tri_b = document.getElementById("so_b").value;
+
+        gia_tri_a = parseInt(gia_tri_a);
+        gia_tri_b = parseInt(gia_tri_b);
+        
+        if(gia_tri_a % gia_tri_b == 0)
+        {
+            ket_qua.innerText = "a chia hết cho b";
+        }
+        else{
+            ket_qua.innerText = "a không chia hết cho b";
+        }
+        })
+    </script>
+</body>
+</html>

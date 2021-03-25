@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng tính cước VNPT cố định</title>
+</head>
+<body>
+    <p>Thời gian gọi nội mạng cố định - cố định:<br><br><input style="width:2.5cm;" type="number" id="so_a"/>giây</p>
+    <p>Thời gian gọi nội mạng cố định - di động giờ bận (từ 7h-23h T2-T7):<br><br><input style="width:2.5cm;" type="number" id="so_b"/>giây</p>
+    <p>Thời gian gọi nội mạng cố định - di động giờ rỗi (từ 23h hôm trước - 7h hôm sau T2-T7,CN và ngày lễ):<br><br><input style="width:2.5cm;" type="number" id="so_c"/>giây</p>
+    <p>Thời gian gọi ngoại mạng cố định - di động giờ bận (từ 7h-23h T2-T7):<br><br><input style="width:2.5cm;" type="number" id="so_d"/>giây</p>
+    <p>Thời gian gọi ngoại mạng cố định - di động giờ rỗi (từ 23h hôm trước - 7h hôm sau T2 -T7,CN và ngày lễ):<br><br><input style="width:2.5cm;" type="number" id="so_e"/>giây</p>
+    <input type="button" id="gia_cuoc" value="Kết quả"/>
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let tinh_gia_cuoc = document.getElementById("gia_cuoc");
+        tinh_gia_cuoc.addEventListener('click',function(){
+            let time_so_a = +document.getElementById("so_a").value;
+            let time_so_b = +document.getElementById("so_b").value;
+            let time_so_c = +document.getElementById("so_c").value;
+            let time_so_d = +document.getElementById("so_d").value;
+            let time_so_e = +document.getElementById("so_e").value;
+            if(time_so_a % 60 !== 0)
+            {
+                cuoc_loai_1 = (Math.floor(time_so_a/60) + 1)*200;
+            }
+            else if(time_so_a % 60 == 0)
+            {
+                cuoc_loai_1 = (Math.floor(time_so_a/60))*200;
+            };
+                if(time_so_b > 0 && time_so_b <= 6)
+                {
+                    cuoc_loai_2 = 90.91;
+                }
+                else if(time_so_b > 6)
+                {
+                    cuoc_loai_2 = 90.91 + (time_so_b - 6)*15.15;
+                };
+                    if(time_so_c > 0 && time_so_c <= 6)
+                    {
+                        cuoc_loai_3 = 90.91*0.7;
+                    }
+                    else if(time_so_c > 6)
+                    {
+                        cuoc_loai_3 = (90.91 + (time_so_c - 6)*15.15)*0.7;
+                    };
+                        if(time_so_d > 0 && time_so_d <= 6)
+                        {
+                            cuoc_loai_4 = 136.36;
+                        }
+                        else if(time_so_d > 6)
+                        {
+                            cuoc_loai_4 = 136.36 + (time_so_d - 6)*22.72;
+                        };
+                            if(time_so_e > 0 && time_so_e <= 6)
+                            {
+                                cuoc_loai_5 = 136.36*0.7;
+                            }
+                            else if(time_so_e > 6)
+                            {
+                                cuoc_loai_5 = (136.36 + (time_so_e - 6)*22.72)*0.7;
+                            };
+            Tong_gia = cuoc_loai_1 +cuoc_loai_2 + cuoc_loai_3 + cuoc_loai_4 + cuoc_loai_5;
+            ket_qua.innerHTML = "Giá cước của bạn là: " + Tong_gia + " đồng"; 
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính hoa hồng</title>
+</head>
+<body>
+    <input type="number" id="doanh_so"/>
+    <input type="button" id="hoa_hong" value="Kết quả"/>
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let tien_thuong = document.getElementById('hoa_hong');
+        tien_thuong.addEventListener('click',function(){
+            let nhap_doanh_so = +document.getElementById("doanh_so").value;
+            if(nhap_doanh_so <= 200000)
+            {
+                muc_hoa_hong = nhap_doanh_so*0.03;
+                ket_qua.innerHTML = "Hoa hồng của bạn là: " + muc_hoa_hong + " đồng";
+            }
+            else if(nhap_doanh_so > 200000 && nhap_doanh_so <= 500000)
+            {
+                muc_hoa_hong = (nhap_doanh_so-200000)*0.05 + (500000-300000)*0.03;
+                ket_qua.innerHTML = "Hoa hồng của bạn là: " + muc_hoa_hong + " đồng";
+            }
+            else if(nhap_doanh_so>500000)
+            {
+                muc_hoa_hong = (nhap_doanh_so - 500000)*0.1 + (500000-200000)*0.05 + 200000*0.03;
+                ket_qua.innerHTML = "Hoa hồng của bạn là: " + muc_hoa_hong + " đồng";
+            }
+        })
+    </script>
+</body>
+</html>
