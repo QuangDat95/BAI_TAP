@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        x = i; y = x%i; z = i--;
+        */
+        let number = 10; //input
+        let count_so_nguyen_to = 0;
+        for(let n = 2; n <= 10; n++){
+            let count_uoc_so = 0;
+            for(let y = 2; y<=10; y++){
+                if(n%y == 0 && y<=n){
+                    count_uoc_so++;
+                }
+            }
+            if(count_uoc_so == 1){
+                count_so_nguyen_to++;
+                document.write(n + ' là số nguyên tố <br>');
+            }
+        }
+        //document.write('Có tổng cộng là: ' + count_so_nguyen_to + ' số nguyên tố');
+
+        //document.write('<br>');
+        document.write(`Có tổng cộng là: ${count_so_nguyen_to} số nguyên tố`);
+    </script>
+</body>
+</html>
