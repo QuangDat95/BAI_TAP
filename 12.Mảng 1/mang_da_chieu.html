@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let dia_games = [];
+        dia_games[0] = 'Pes 2021';
+        dia_games[1] = 'Horizon';
+        dia_games[2] = [];
+        dia_games[2][0] = 'Bút';
+        dia_games[2][1] = 'Vở';
+
+        /*
+         dia_games[2] = ['Bút','Vở'];
+        */
+        //cho thêm vào hộp đia fifa21 (hiện tại chỉ có Pes2021 và Horizon)
+        dia_games[3] = 'Fifa 21';
+
+
+        let tu_sach = [
+            'Toán',
+            'Văn',
+            'Sử',
+            'Địa',
+            ['Doremon', 'Tsubasa', ['Bút']]
+        ];
+        //lấy doremon
+        console.log(tu_sach[4][0]);
+        //lay tsubasa bang jindo
+        tu_sach[4][1] = 'Jindo';
+        //lay jindo
+        console.log(tu_sach[4][1]);
+        //thay sach bang hop dia game
+        tu_sach[0] = dia_games;
+        console.log(tu_sach);
+        //lấy bút ra
+        console.log(tu_sach[4][2][0]);
+    </script>
+</body>
+
+</html>
