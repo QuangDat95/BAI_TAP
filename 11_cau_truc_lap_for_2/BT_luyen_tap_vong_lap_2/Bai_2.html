@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+    <input type="number" id="nhap_so"/>
+    <input type="button" id="nhan_kq" value="Kết quả"/>
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let nut_kq = document.getElementById("nhan_kq");
+        nut_kq.addEventListener('click', function(){
+            let gtr_A = +document.getElementById("nhap_so").value;
+            let i = 1;
+            let giai_thua = 1;
+            while( i <= gtr_A){
+                giai_thua = giai_thua*i;
+                i++;
+            }
+            ket_qua.innerText = `Kết quả là:  ${giai_thua}`;
+        })
+    </script>
+</body>
+</html>
