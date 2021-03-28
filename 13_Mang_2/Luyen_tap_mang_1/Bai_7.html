@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+<body>
+    Nhập vào 10 phần tử: <input type="number" id="nhap_so"/><input type="button" id="them_so" value="Thêm" onclick="them_so_vao_mang();"/><br><br>
+    Nhập vào phần tử V: <input type="number" id="nhap_V"/><input type="button" id="Kiem_tra" value="kết quả" onclick="kiem_tra_V()"/><br>
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let array = Array();
+        let x=0;
+        function them_so_vao_mang(){
+            array[x] = document.getElementById("nhap_so").value;
+            alert("Số " + array[x] + " được thêm vào mảng tại vị trí " + x);
+            x++;
+            document.getElementById("nhap_so").value = "";
+        }
+        function kiem_tra_V(){
+            nhap_so_V = document.getElementById("nhap_V").value;
+            for(let i=0;i<array.length;i++){
+                if(array[i] == nhap_so_V){
+                    array.splice(i,1);
+                    array[array.length - 1] = 0;
+                    ket_qua.innerText = "V có trong mảng đã cho";
+                }
+                else{
+                    ket_qua.innerText = "V không có trong mảng";
+                }
+            }
+            console.log(array);
+        }
+    </script>
+</body>
+</html>

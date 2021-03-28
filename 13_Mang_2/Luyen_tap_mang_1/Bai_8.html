@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nhập 10 phần tử mảng: <input type="number" id="nhap_so"/><br>
+    <input type="button" id="them_so" value="thêm vào" onclick="them_so_vao_mang()"/><input type="button" id="nut_kq" value="Kết quả" onclick="sap_xep_giam_dan()"/>
+    <script>
+        let a,b;
+        let array=Array();
+        let x = 0;
+        function them_so_vao_mang(){
+            array[x] = document.getElementById("nhap_so").value;
+            alert("Số " + array[x] + " được thêm vào vị trí " + x);
+            x++;
+            document.getElementById("nhap_so").value = "";
+        }
+        function sap_xep_giam_dan(){
+        array.sort(function(a,b){return b - a});
+        console.log(array);
+        }
+    </script>
+</body>
+</html>
