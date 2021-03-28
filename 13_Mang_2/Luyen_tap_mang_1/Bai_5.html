@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+<body>
+    <script>
+        let array = [2,4,5,6,-5,-6,-7,-1,-3,5,-6,-2,2,1,34,5];
+        let sum = 0;
+        for(let i=0;i<array.length;i++){
+            if(array[i]<0){
+                sum++;
+            }
+        }
+        document.write("Mảng có tất cả " + sum + " số nguyên âm");
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    <input type="number" id="nhap_so"/>
+    <input type="button" id="Add_so" value="thêm vào" onclick="them_so_vao_mang()"/>
+    <input type="button" id="nut_kq" value="Kết quả" onclick="ket_qua_dao_nguoc()"/>
+    <script>
+        let array =Array();
+        let x = 0;
+        function them_so_vao_mang(){
+            array[x] = document.getElementById("nhap_so").value;
+            alert("Số " + array[x] + " được thêm vào vị trí " + x);
+            x++;
+            document.getElementById("nhap_so").value = "";
+        }
+        function ket_qua_dao_nguoc(){
+            let first = 0;
+            let last = array.length - 1;
+            while(first<last){
+                let b = array[first];
+                array[first] = array[last];
+                array[last] = b;
+                first++;
+                last--;
+            } 
+            console.log(array); 
+        }
+    </script>
+</body>
+</html>

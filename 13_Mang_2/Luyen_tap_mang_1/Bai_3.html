@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <input type="number" id="nhap_so"/>
+    <input type="button" id="Addnumber" value="Add" onclick="Add_number_to_array()"/>
+    <input type="button" id="nut_kq" value="kết quả" onclick="Display_max_array()"/>
+    <p id="ket_qua"></p>
+    <script>
+        let array = Array();
+        let x = 0;
+        let ket_qua = document.getElementById("ket_qua");
+        function Add_number_to_array(){
+            array[x] = document.getElementById("nhap_so").value;
+            alert("Số " + array[x] + " được thêm vào vị trí " + x);
+            x++;
+            document.getElementById("nhap_so").value = "";
+        }
+        function Display_max_array(){
+            let max = array[0];
+            let sum = 0;
+            for(let i=0;i<array.length;i++)
+            {
+                if(array[i]>max){
+                    max = array[i];
+                }
+                sum += +array[i];
+            }
+            let tb = sum/(array.length);
+            console.log(array);
+            document.getElementById("ket_qua").innerHTML = "Trung bình cộng là: " + tb + "<br/>" + " Giá trị lớn nhất là: " + max;
+        }
+        
+    </script>
+</body>
+</html>

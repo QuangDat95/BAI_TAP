@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+
+<body>
+    <script>
+        let array = [1, 2, 3, 7, 9, 5, 6, 8, 0, 5];
+        let max = array[0];
+        let index = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                index =i;
+            }
+        };
+        document.write("Số lớn nhất là: " + max + " tại vị trí thứ " + index);
+    </script>
+</body>
+
+</html>

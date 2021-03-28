@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+
+<body>
+    Nhập 10 phần tử của mảng: <input type="number" id="nhap_so" />
+    <input type="button" id="them_vao" value="thêm" onclick="them_so_vao_mang()" /><br><br>
+    Nhập số V: <input type="number" id="nhap_V" />
+    <input type="button" id="nut_KT" value="Kiểm tra" onclick="kiem_tra_so_V()" />
+    <p id="ket_qua"></p>
+    <script>
+        let array = Array();
+        let x = 0;
+        let ket_qua = document.getElementById("ket_qua");
+        function them_so_vao_mang() {
+            array[x] = document.getElementById("nhap_so").value;
+            alert("Số " + array[x] + " được thêm vào mảng tại vị trí " + x);
+            x++;
+            document.getElementById("nhap_so").value = "";
+        }
+        function kiem_tra_so_V() {
+            let nhap_so_V = document.getElementById("nhap_V").value;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] == nhap_so_V) {
+                    ket_qua.innerText = "V is in the array";
+                }
+                else {
+                    ket_qua.innerText = "V is not in the array";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
