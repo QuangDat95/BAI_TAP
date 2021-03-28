@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In hình tam giác</title>
+  <!--<style>
+        p.indent {
+            padding-left: 0.8em
+        }
+    </style>--> 
+</head>
+
+<body>
+    <p></p>
+    <script>
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= i; j++) {
+                if (j == 1) {
+                    document.write('&nbsp;*');
+                }
+                else {
+                    document.write('*');
+                }
+            }
+            document.write('<br/>');
+        };
+        document.write('<br>');
+        for (var k = 5; k >= 1; k--) {
+            for (var l = 1; k >= l; l++) {
+               
+                document.write('*');
+                
+            }
+            document.write('<br/>');
+        };
+        document.write('<br/>');
+        for (var m = 2; m <= 6; m++) {
+            for (var n = 7; n > m; n--) {
+                if(n==7)
+                {
+                    document.write("&#160;&ensp;");
+                }
+                else
+                {
+                    document.write("&ensp;")
+                }
+                   
+            };
+            for (var a = 2; a <= m; a++) {
+                    document.write("*");
+            };
+
+            document.write("<br/>");
+        };
+        document.write("<br>");
+        for (var b = 2; b <= 6; b++) {
+            for (var c = 2; c <= b; c++) {
+                document.write("&ensp;");
+            }
+            for (var d = 6; d >= b; d--) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+    </script>
+</body>
+
+</html>
