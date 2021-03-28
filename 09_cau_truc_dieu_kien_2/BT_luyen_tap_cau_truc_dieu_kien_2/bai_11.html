@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+
+<body>
+    <p>Thu nhập tính thuế phải nộp:</p><input type="number" id="nhap_so_1" />
+    <input type="button" id="nut_kq" value="Kết quả" />
+    <p id="ket_qua"></p>
+    <script>
+        let ket_qua = document.getElementById("ket_qua");
+        let nut_ket_qua = document.getElementById("nut_kq");
+        nut_ket_qua.addEventListener('click', function () {
+            let nhap_tn = +document.getElementById("nhap_so_1").value;
+            if (nhap_tn > 0 && nhap_tn <= 5000000) {
+                ket_qua.innerText = "Thuế phải nộp là: " + nhap_tn * 0.05 + " đồng";
+            }
+            else if (nhap_tn > 5000000 && nhap_tn <= 10000000) {
+                ket_qua.innerText = "Thuế phải nộp là: " + (nhap_tn * 0.1 - 250000) + " đồng";
+            }
+            else if (nhap_tn > 10000000 && nhap_tn <= 18000000) {
+                ket_qua.innerText = "Thuế phải nộp là: " + (nhap_tn * 0.15 - 750000) + " đồng";
+            }
+            else if (nhap_tn > 18000000 && nhap_tn <= 32000000) {
+                ket_qua.innerText = "Thuế phải nộp là: " + (nhap_tn * 0.2 - 1650000) + " đồng";
+            }
+            else if (nhap_tn > 32000000 && nhap_tn <= 52000000) {
+                ket_qua.innerText = "Thuế phải nộp là: " + (nhap_tn * 0.25 - 3250000) + " đồng";
+            }
+            else if (nhap_tn > 52000000 && nhap_tn <= 80000000) {
+                ket_qua.innerText = "Thuế phải nộp là: " + (nhap_tn * 0.3 - 5850000) + " đồng";
+            }
+            else if (nhap_tn > 80000000) {
+                ket_qua.innerText = "Thuế phải nộp là: " + (nhap_tn * 0.35 - 9850000) + " đồng";
+            }
+        })
+    </script>
+</body>
+
+</html>
