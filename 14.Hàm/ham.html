@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-   <!-- <input type="button" onclick="tinh_tong()" value="Đăng ký"/>-->
+    <!-- <input type="button" onclick="tinh_tong()" value="Đăng ký"/>-->
     <script>
         /*
         Khái niệm: khối xử lý
         cú pháp: function <function-name>(){//code here}
         */
-        //function xu_ly(){
-        //    alert('xu ly');
-        //}
+        function xu_ly(){
+            alert('xu ly');
+        }
         //tham số mặc định là gán sẵn giá trị cho tham số
         // ví dụ hàm 3 tham số, những tham số tách nhau = dấu phẩy
-            // dùng return cho hàm trả về giá trị nào đó
-            //những đoạn sau return nó ko thực hiện
-        ///function ham_3_tham_so(a1,a2,a3){
+        // dùng return cho hàm trả về giá trị nào đó
+        //những đoạn sau return nó ko thực hiện
+       /* function ham_3_tham_so(a1,a2,a3){
 
-       //}
+        }*/
         //ví dụ hàm có 1 tham số bắt buộc và 1 tham số mặc định
-       /* function tinh_tong(a,b = 4){
-           let ket_qua = a + b;
-            return ket_qua;
-    }
-        let tong = tinh_tong(5);
-        alert(tong);*/
-        function square(so_a){
-            so_a = so_a*so_a;
-            return so_a;
+        /* function tinh_tong(a,b = 4){
+            let ket_qua = a + b;
+             return ket_qua;
+     }
+         let tong = tinh_tong(5);
+         alert(tong);*/
+        /* function square(so_a){
+             so_a = so_a*so_a;
+             return so_a;
+         }
+         let y = 10;
+         y = square(y);
+         console.log(y);*/
+        function swap(a, b) {
+            var temp = a;
+            a = b;
+            b = temp;
         }
-        let y = 10;
-        y = square(y);
-        console.log(y);
+
+        var a = 5;
+        var b = 10;
+        swap(a, b);
+        document.write("a = " + a + ", b = " + b);
     </script>
 </body>
+
 </html>
