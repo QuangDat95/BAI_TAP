@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read numbers Elements</title>
+</head>
+
+<body>
+    <script>
+        let a = ['s', 'v', 'b', 2, 't',6,'n', 53, 'u', 'd',27];
+        let b = a.length;
+        let sum = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (typeof a[i] == "number") {
+                sum = sum + 1;
+            }
+        };
+        document.write("Độ dài mảng là: " + b + '<br>');
+        document.write("Số ký tự số có trong mảng là: " + sum);
+    </script>
+</body>
+
+</html>
