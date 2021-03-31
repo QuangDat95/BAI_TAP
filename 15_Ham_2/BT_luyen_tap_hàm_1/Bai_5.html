@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let a = ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
-        let b = ['Ursa Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
-        function search(star){
-            for(let i=0;i<a.length;i++){
-                if(star == a[i])
-                {
-                    document.write("Ngôi sao " + a[i] + " chứa trong chòm sao " + b[i]);
-                }
+        let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        function search(star) {
+            let tim_thay = '';
+            for (let i = 0; i < a.length; i++) {
+                if (star == a[i]) {
+                    tim_thay = "Ngôi sao " + a[i] + " chứa trong chòm sao " + b[i];
                 }
             }
-            
+            if (tim_thay != '') {
+                document.write(tim_thay);
+            }
+            else {
+                document.write("Không tìm thấy");
+            }
+        }
+
         let nhap_star = prompt("Nhập tên ngôi sao:");
-       search(nhap_star);
+        search(nhap_star);
     </script>
 </body>
+
 </html>
