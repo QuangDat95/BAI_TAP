@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+</head>
+
+<body>
+    <form>
+        <h3><b>Từ điển Anh - Việt</b></h3>
+        <p>Nhập Tiếng Anh</p>
+        <input type="text" id="t_anh" /><br /><br />
+        <input type="button" id="nut_kq" value="Dịch sang tiếng việt" /><br><br />
+        <textarea id="ket_qua" style="width: 5cm; height:0.6cm;"></textarea>
+    </form>
+    <script>
+        let a = ['and', 'or', 'zero', 'yellow', 'green', 'red', 'tree', 'flower', 'street', 'blue', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'loop', 'array', 'function', 'time', 'day'];
+        let b = ['và', 'hoặc', 'số 0', 'màu vàng', 'màu xanh lục', 'màu đỏ', 'cây cối', 'bông hoa', 'con đường', 'màu xanh dương', 'số 1', 'số 2', 'số 3', 'số 4', 'số 5', 'số 6', 'số 7', 'số 8', 'số 9', 'số 10', 'vòng lặp', 'mảng', 'hàm', 'thời gian', 'ngày'];
+        let ket_qua = document.getElementById("ket_qua");
+        let nut_kq = document.getElementById("nut_kq");
+        nut_kq.addEventListener('click', function () {
+            let nhap_TA = document.getElementById("t_anh").value;
+            for(let i=0;i<a.length;i++){
+                if (nhap_TA == a[i]) {
+                        ket_qua.innerText = b[i];
+                        break;
+                    }
+                   else {
+                       ket_qua.innerText = "không tìm thấy từ này";
+                   }
+            }  
+            })
+    </script>
+</body>
+
+</html>
