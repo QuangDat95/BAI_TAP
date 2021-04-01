@@ -47,78 +47,80 @@
             <tr>
                 <td>Ngày sinh</td>
                 <td style="width:6cm;height: 1cm;"><select id="ngay_sinh">
-                        <option value="">--Ngày--</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
+                        <option value=''>--Ngày--</option>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10</option>
+                        <option value='11'>11</option>
+                        <option value='12'>12</option>
+                        <option value='13'>13</option>
+                        <option value='14'>14</option>
+                        <option value='15'>15</option>
+                        <option value='16'>16</option>
+                        <option value='17'>17</option>
+                        <option value='18'>18</option>
+                        <option value='19'>19</option>
+                        <option value='20'>20</option>
+                        <option value='21'>21</option>
+                        <option value='22'>22</option>
+                        <option value='23'>23</option>
+                        <option value='24'>24</option>
+                        <option value='25'>25</option>
+                        <option value='26'>26</option>
+                        <option value='27'>27</option>
+                        <option value='28'>28</option>
+                        <option value='29'>29</option>
+                        <option value='30'>30</option>
+                        <option value='31'>31</option>
                     </select>
                     <select id="thang_sinh">
-                        <option value="">--Tháng--</option>
-                        <option value="1">Tháng 1</option>
-                        <option value="2">Tháng 2</option>
-                        <option value="3">Tháng 3</option>
-                        <option value="4">Tháng 4</option>
-                        <option value="5">Tháng 5</option>
-                        <option value="6">Tháng 6</option>
-                        <option value="7">Tháng 7</option>
-                        <option value="8">Tháng 8</option>
-                        <option value="9">Tháng 9</option>
-                        <option value="10">Tháng 10</option>
-                        <option value="11">Tháng 11</option>
-                        <option value="12">Tháng 12</option>
+                        <option value=''>--Tháng--</option>
+                        <option value='1'>Tháng 1</option>
+                        <option value='2'>Tháng 2</option>
+                        <option value='3'>Tháng 3</option>
+                        <option value='4'>Tháng 4</option>
+                        <option value='5'>Tháng 5</option>
+                        <option value='6'>Tháng 6</option>
+                        <option value='7'>Tháng 7</option>
+                        <option value='8'>Tháng 8</option>
+                        <option value='9'>Tháng 9</option>
+                        <option value='10'>Tháng 10</option>
+                        <option value='11'>Tháng 11</option>
+                        <option value='12'>Tháng 12</option>
                     </select>
                     <select id="nam_sinh">
-                        <option value="">--Năm--</option>
-                        <option value="1990">1990</option>
-                        <option value="1991">1991</option>
-                        <option value="1992">1992</option>
-                        <option value="1993">1993</option>
-                        <option value="1994">1994</option>
-                        <option value="1995">1995</option>
-                        <option value="1996">1996</option>
-                        <option value="1997">1997</option>
-                        <option value="1998">1998</option>
-                        <option value="1999">1999</option>
-                        <option value="2000">2000</option>
-                        <option value="2001">2001</option>
+                        <option value=''>--Năm--</option>
+                        <option value='1990'>1990</option>
+                        <option value='1991'>1991</option>
+                        <option value='1992'>1992</option>
+                        <option value='1993'>1993</option>
+                        <option value='1994'>1994</option>
+                        <option value='1995'>1995</option>
+                        <option value='1996'>1996</option>
+                        <option value='1997'>1997</option>
+                        <option value='1998'>1998</option>
+                        <option value='1999'>1999</option>
+                        <option value='2000'>2000</option>
+                        <option value='2001'>2001</option>
                     </select>
-                    <p style="color:red" type="text" id="thieu_bd"></p>
+                    <p type="text" id="thieu_bd" style="color:red"></p>
                 </td>
             </tr>
             <tr>
-                <td><label>Giới tính</label></td>
-                <td style="width:6cm;height: 1cm;"><input type="radio" name="gioi_tinh" id="gt_nam"
-                        checked="checked" />Nam
-                    <input type="radio" name="gioi_tinh" id="gt_nu" />Nữ
-                </td>
+                <p>
+                    <td><label>Giới tính</label></td>
+                    <td style="width:6cm;height: 1cm;"><input type="radio" name="gioi_tinh" id="gt_nam"
+                            checked="checked" />Nam
+                        <input type="radio" name="gioi_tinh" id="gt_nu" />Nữ
+                    </td>
+                </p>
             </tr>
             <tr>
                 <td></td>
@@ -127,8 +129,65 @@
             </tr>
         </table>
     </form>
-    <script src="form.js">
+    <script>
+        let nut_dk = document.getElementById("nut_dk");
+nut_dk.addEventListener('click', function () {
+    let first_name = document.getElementById("first_name").value;
+    let last_name = document.getElementById("last_name").value;
+    let email = document.getElementById("email").value;
+    let mat_khau = document.getElementById("mat_khau").value;
+    let ngay_sinh = document.getElementById("ngay_sinh").value;
+    let thang_sinh = document.getElementById("thang_sinh").value;
+    let nam_sinh = document.getElementById("nam_sinh").value;
+    let thieu_ho = document.getElementById("thieu_ho");
+    let thieu_ten = document.getElementById("thieu_ten");
+    let thieu_email = document.getElementById("thieu_email");
+    let thieu_mk = document.getElementById("thieu_mk");
+    let thieu_bd = document.getElementById("thieu_bd");
 
+    if (first_name == '') {
+        thieu_ho.innerText = "Vui lòng nhập Họ";
+    }
+    else {
+        thieu_ho.innerText = "";
+    }
+    if (last_name == '') {
+        thieu_ten.innerText = "Vui lòng nhập Tên";
+    } else {
+        thieu_ten.innerText = "";
+    };
+    if (email == '') {
+        thieu_email.innerText = "Vui lòng nhập Email";
+    } else {
+        thieu_email.innerText = "";
+    };
+    if (mat_khau == '') {
+        thieu_mk.innerText = "Vui lòng nhập mật khẩu";
+    } else {
+        thieu_mk.innerText = "";
+    };
+    if (ngay_sinh == '' || thang_sinh == '' || nam_sinh == '') {
+        thieu_bd.innerText = "vui lòng chọn ngày tháng năm sinh đầy đủ";
+    } else {
+        thieu_bd.innerText = "";
+    }
+
+    if (first_name != '' && last_name != '' && email != '' && mat_khau != '' && ngay_sinh != '' && thang_sinh != '' && nam_sinh != '') {
+        if (document.getElementById("gt_nam").checked) {
+            document.write(`Chào mừng anh ${first_name} ${last_name} đã đăng ký thành công! <br>`);
+            document.write(`Họ và tên: ${first_name} ${last_name}<br>`);
+            document.write(`Email: ${email}<br>`);
+            document.write(`Ngày sinh: ${ngay_sinh}/${thang_sinh}/${nam_sinh}`);
+        };
+        if (document.getElementById("gt_nu").checked) {
+            document.write(`Chào mừng chị ${first_name} ${last_name} đã đăng ký thành công! <br>`);
+            document.write(`Họ và tên: ${first_name} ${last_name}<br>`);
+            document.write(`Email: ${email}<br>`);
+            document.write(`Ngày sinh: ${ngay_sinh}/${thang_sinh}/${nam_sinh}`);
+        };
+
+    }
+})
     </script>
 </body>
 
