@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a_R;
+        let b_R;
+        function tinh_S(a_R){
+            return a_R*a_R*3.14;
+        }
+        function tinh_P(b_R){
+            return 2*b_R*3.14;
+        }
+        let nhap_R = prompt("Nhập bán kính hình tròn:");
+        let ket_qua_S = tinh_S(nhap_R);
+        let ket_qua_P = tinh_P(nhap_R);
+        alert(`Diện tích hình tròn là: ${ket_qua_S}`);
+        alert(`Chu vi hình tròn là: ${ket_qua_P}`);
+    </script>
+</body>
+</html>
