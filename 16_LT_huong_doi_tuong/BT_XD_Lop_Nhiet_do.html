@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function nhiet_do(doC){
+            this.do_C = doC,
+            this.do_K = function(){
+                return `Nhiệt độ đổi từ độ C sang độ K là: ${doC+273.15} K`;
+            },
+            this.do_F = function(){
+                return `Nhiệt độ đổi từ độ C sang độ F là: ${1.8*doC +32} F`;
+            }
+        }
+        doi_nhiet_do = new nhiet_do(25);
+        DoK = doi_nhiet_do.do_K();
+        DoF = doi_nhiet_do.do_F();
+        document.write(`${DoK}<br>`);
+        document.write(DoF);
+    </script>
+</body>
+</html>
