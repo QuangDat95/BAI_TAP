@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+</head>
+
+<body>
+    <canvas id='my_canvas' style="width:500px;height:500px; background-color: red;"> </canvas>
+    <script>
+        let my_canvas = document.getElementById('my_canvas'); //khởi tạo đối tượng thông qua biến my_canvas
+        let ctx = my_canvas.getContext('2d'); //gọi tới phương thức getContext, truyền vào '2d'
+        //vẽ đường thằng
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+
+        //vẽ dường tròn
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        //viết chữ
+        ctx.font = "30px Arial";//thuoc tinh
+        ctx.fillText("Hello World", 50, 100);//phuong thuc
+
+        //vẽ hcn
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 50, 150, 15);
+
+        //hiệu ứng gradient
+
+        var grd = ctx.createLinearGradient(0, 30, 200, 0);
+        grd.addColorStop(0, "blue");
+        grd.addColorStop(1, "green");
+   
+
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+    </script>
+</body>
+
+</html>

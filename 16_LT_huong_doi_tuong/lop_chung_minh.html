@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Lop_Chung_Minh = function () {
+            //khai bao thuoc tinh 
+            this.ten_lop = '';
+            this.tong_so_hoc_vien = 0;
+            //khai bao phuong thuc
+            //set
+            /*
+            Nhũng phương thức mà có tác dụng thay đổi giá trị của thuộc tính
+            gọi đến thuộc tính và gán giá trị cho nó
+            */
+            this.dat_ten_lop = function (tham_so_ten_lop) {
+                this.ten_lop = tham_so_ten_lop;
+            }
+
+            this.tao_lop_hoc = function (tham_so_ten_lop, tham_so_tshv){
+                this.ten_lop = tham_so_ten_lop;
+                this.tong_so_hoc_vien = tham_so_tshv;
+            }
+            //get
+            /*Những phương thức có tác dụng lấy về giá trị của thuộc tính*/
+            this.lay_ten_lop = function () {
+                return this.ten_lop;
+            }
+            this.lay_thong_tin_lop_hoc = function(){
+                document.write(`Tên của lớp là: ${this.ten_lop}<br>`);
+                document.write(`Tổng số học viên là: ${this.tong_so_hoc_vien}<br>`);
+            }
+        }
+        //khởi tạo
+        let Lop_Chung_Minh1 = new Lop_Chung_Minh();
+        //goi thuoc tinh
+     //   objLop_Chung_Minh.ten_lop;
+        //gọi tên lớp
+      //  objLop_Chung_Minh.dat_ten_lop();
+        objLop_Chung_Minh1.tao_lop_hoc('C03',5);
+        objLop_Chung_Minh1.lay_thong_tin_lop_hoc();
+    </script>
+</body>
+
+</html>
