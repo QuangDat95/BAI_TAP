@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //khởi tạo lớp Pin
+        let Battery = function () {
+            //khoi tao thuoc tinh
+            this.energy = 0;
+            //khởi tạo phương thức mức năng lượng
+            this.setEnergy = function (energy) {
+                this.energy = energy;
+            };
+            //trả về mức năng lượng
+            this.getEnergy = function () {
+                return this.energy;
+            };
+            // kiểm tra năng lượng lớn hơn 0 thì sẽ giảm 1
+            this.decreaseEnergy = function () {
+                if (this.energy > 0) {
+                    this.energy--;
+                }
+            }
+        };
+        //Khởi tạo lớp đèn
+        let FlashLamp = function () {
+            //thuộc tính pin
+            this.battery = '';
+            //phuong thuc pin
+            this.setBattery = function (battery) {
+                this.battery = battery;
+            };
+
+            this.getBatteryInfo = function () {
+                return this.battery.getEnergy();
+            };
+
+            this.light = function () {
+                if (this.status) {
+                    alert("Lighting");
+                    this.battery.decreaseEnergy();
+                } else {
+                    alert("Not lighting");
+                }
+
+            };
+            this.turnOn = function () {
+                this.status = true;
+            };
+            this.turnOff = function () {
+                this.status = false;
+            }
+        };
+
+        let objBattery = new Battery();
+
+        //thiep lap thuoc tinh this.energy
+        objBattery.setEnergy(10);
+
+        //lay ve this.energy
+
+        //khoi tao doi tuong FlashLamp
+        let objFlashLamp = new FlashLamp();
+
+       // console.log( objFlashLamp );
+
+        //dua vao doi tuong objBattery
+        objFlashLamp.setBattery( objBattery );
+
+
+        document.write("Battery info: " + objFlashLamp.getBatteryInfo() + "<br/>");
+        document.write("Turn on<br/>");
+        objFlashLamp.turnOn();
+        objFlashLamp.light();
+        document.write("Battery info: " + objFlashLamp.getBatteryInfo() + "<br/>");
+        
+        document.write("turn off<br/>");
+        objFlashLamp.turnOff();
+        objFlashLamp.light();
+        document.write("Battery info: " + objFlashLamp.getBatteryInfo());
+    </script>
+</body>
+
+</html>
