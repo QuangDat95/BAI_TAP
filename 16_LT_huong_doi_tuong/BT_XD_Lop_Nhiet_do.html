@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="ket_qua"></p>
     <script>
-        function nhiet_do(doC){
+        function Nhiet_do(doC){
             this.do_C = doC,
+            this.getdo_C = doC,
             this.do_K = function(){
                 return `Nhiệt độ đổi từ độ C sang độ K là: ${doC+273.15} K`;
             },
@@ -17,11 +19,10 @@
                 return `Nhiệt độ đổi từ độ C sang độ F là: ${1.8*doC +32} F`;
             }
         }
-        doi_nhiet_do = new nhiet_do(25);
+        doi_nhiet_do = new Nhiet_do(25);
         DoK = doi_nhiet_do.do_K();
         DoF = doi_nhiet_do.do_F();
-        document.write(`${DoK}<br>`);
-        document.write(DoF);
+        document.getElementById("ket_qua").innerHTML = `${DoK}<br> ${DoF}`;
     </script>
 </body>
 </html>

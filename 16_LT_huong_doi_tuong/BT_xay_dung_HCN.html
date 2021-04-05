@@ -12,6 +12,13 @@
         function Rectangle(chieu_dai,chieu_rong){
             this.chieu_dai = chieu_dai,
             this.chieu_rong = chieu_rong,
+            this.getchieu_dai = function()
+            {
+                return chieu_dai;
+            },
+            this.getchieu_rong = function(){
+                return chieu_rong;
+            },
             this.dien_tich = function(){
                 return chieu_dai*chieu_rong;
             },
@@ -23,8 +30,9 @@
             var ctx = canvas.getContext('2d');
             ctx.strokeRect(100,50,chieu_dai,chieu_rong);
             }
-           
+                                                                         
         }
+        
         HCN = new Rectangle(200,150);
          dientich = HCN.dien_tich();
         chuvi = HCN.chu_vi();
