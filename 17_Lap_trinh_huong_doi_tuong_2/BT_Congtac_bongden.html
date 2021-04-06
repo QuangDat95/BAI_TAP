@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công tắc bóng đèn</title>
+</head>
+
+<body>
+    <script>
+        class switchButton{
+            ElectricLamp;
+            constructor(ElectricLamp){
+                this.ElectricLamp = false;
+            }
+            connectToLamp(ElectricLamp){
+                return this.ElectricLamp;
+            }
+            switchOff(){
+            this.ElectricLamp == false;
+                }
+            switchOn(){
+            this.ElectricLamp == true;
+                }
+        }
+        class ElectricLamp{
+            lamp;
+            constructor(lamp){
+            }
+            turnOff(){
+                    document.write("đèn đã tắt<br>");
+                }
+            turnOn(){
+                    document.write("đèn đã bật<br>"); 
+            }
+        }
+        let cong_tac = new switchButton();
+        let bong_den = new ElectricLamp();
+        cong_tac.connectToLamp(bong_den.turnOn());
+        cong_tac.connectToLamp(bong_den.turnOff());
+        cong_tac.connectToLamp(bong_den.turnOn());
+        cong_tac.connectToLamp(bong_den.turnOff());
+        cong_tac.connectToLamp(bong_den.turnOn());
+        cong_tac.connectToLamp(bong_den.turnOff());
+        cong_tac.connectToLamp(bong_den.turnOn());
+        cong_tac.connectToLamp(bong_den.turnOff());
+        cong_tac.connectToLamp(bong_den.turnOn());
+        cong_tac.connectToLamp(bong_den.turnOff());
+    </script>
+</body>
+
+</html>
