@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="vien_game"
+        style="border: 1px solid black; height: 300px; width: 300px; background-color: black;position: relative;">
+        <img id="tank" src="xetank.png" style="position: relative; top: 0px; left: 0px; transform: rotate(0deg);"
+            width="30" height="30">
+
+    </div>
+    <script>
+        /*
+        switch(key)
+        */
+        let tank = document.getElementById('tank');
+        let speed = 3;
+        let huong_dc = 'phai';
+        let vien_dan = `<img id="vien_dan" src="VIENDAN.png" style="width:5px; height: 5px;"/>`;
+        document.addEventListener('keydown', function (e) {
+            let phim_bam = e.code;
+            //  console.log(e.code);
+
+            switch (phim_bam) {
+                case 'ArrowRight':
+                    var value_left = tank.style.left;
+                    //chuyển đôiỉ du lieu
+                    value_left = parseInt(value_left);
+                    //tang gia tri value_left
+                    value_left += speed;
+                    //đat lai gia tri style left
+                    if (value_left < 273) {
+                        tank.style.left = value_left + 'px';
+                    }
+                    //xoay sang phải 90 do
+                    tank.style.transform = 'rotate(90deg)';
+                    huong_dc = 'phai';
+
+                    break;
+                case 'ArrowLeft':
+                    var value_left = tank.style.left;
+                    value_left = parseInt(value_left);
+                    value_left -= speed;
+                    if (value_left >= 0) {
+                        tank.style.left = value_left + 'px';
+                    }
+                    tank.style.transform = 'rotate(270deg)';
+                    huong_dc = 'trai';
+                    break;
+                case 'ArrowDown':
+                    var value_top = tank.style.top;
+                    value_top = parseInt(value_top);
+                    value_top += speed;
+                    if (value_top < 273) {
+                        tank.style.top = value_top + 'px';
+                    }
+                    tank.style.transform = 'rotate(180deg)';
+                    huong_dc = 'xuong';
+                    break;
+                case 'ArrowUp':
+                    var value_top = tank.style.top;
+                    value_top = parseInt(value_top);
+                    value_top -= speed;
+                    if (value_top >= 0) {
+                        tank.style.top = value_top + 'px';
+                    }
+                    tank.style.transform = 'rotate(0deg)';
+                    huong_dc = 'len';
+                    break;
+                case 'Space':
+                    //lấy giá trị top
+                    var value_top = tank.style.top;
+                    value_top = parseInt(value_top);
+                    //lấy giá trị left
+                    var value_left = tank.style.left;
+                    value_left = parseInt(value_left);
+                    //tao viên đạo
+                    var vien_dan = document.createElement('img');
+                    vien_dan.src = 'VIENDAN.png';
+                    vien_dan.id = 'vien_dan';
+                    vien_dan.style = 'position:absolute;width:5px; height: 5px;';
+                    //đưa vào game
+                    var vien_game = document.getElementById('vien_game');
+                    vien_game.appendChild(vien_dan);
+                    
+                    if (huong_dc == 'phai') {
+                        vien_dan.style.left = value_left + 26 + 'px';
+                        vien_dan.style.top = value_top + 12 + 'px';
+                    }
+                    if (huong_dc == 'trai') {
+                        vien_dan.style.left = value_left - 1 + 'px';
+                        vien_dan.style.top = value_top + 12 + 'px';
+                    }
+                    if (huong_dc == 'len') {
+                        vien_dan.style.left = value_left + 13 + 'px';
+                        vien_dan.style.top = value_top + 0 + 'px';
+                    }
+                    if (huong_dc == 'xuong') {
+                        vien_dan.style.left = value_left + 13 + 'px';
+                        vien_dan.style.top = value_top + 26 + 'px';
+                    }
+                    //thuc hien ban vien dan
+                    di_chuyen_vien_dan(
+                        vien_dan,
+                        vien_dan.style.left,
+                        vien_dan.style.top,
+                        huong_dc
+                    );
+                    break;
+            }
+        })
+        function di_chuyen_vien_dan(vien_dan, left, top, huong_dc) {
+            left = parseInt(left);
+            top = parseInt(top);
+            if (huong_dc == 'phai') {
+                vien_dan.style.left = left + 'px';
+                left += 1;
+            }
+            if (huong_dc == 'trai') {
+                vien_dan.style.left = left + 'px';
+                left -= 1;
+            }
+            if (huong_dc == 'len') {
+                vien_dan.style.top = top + 'px';
+                top--;
+            }
+            if (huong_dc == 'xuong') {
+                vien_dan.style.top = top + 'px';
+                top++;
+            }
+            //goi lai ham va truyen vao tham so
+            if (huong_dc == 'phai') {
+                if (left < 300) {
+                    setTimeout(di_chuyen_vien_dan, 10, vien_dan, left, top, huong_dc);
+                } else {
+                    vien_dan.remove();
+                }
+            }
+            if (huong_dc == 'trai') {
+                if (left > -2.5) {
+                    setTimeout(di_chuyen_vien_dan, 10, vien_dan, left, top, huong_dc);
+                } else {
+                    vien_dan.remove();
+                }
+            }
+            if (huong_dc == 'len') {
+                if (top > -2.5) {
+                    setTimeout(di_chuyen_vien_dan, 10, vien_dan, left, top, huong_dc);
+                } else {
+                    vien_dan.remove();
+                }
+            }
+            if (huong_dc == 'xuong') {
+                if (top < 300) {
+                    setTimeout(di_chuyen_vien_dan, 10, vien_dan, left, top, huong_dc);
+                } else {
+                    vien_dan.remove();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
