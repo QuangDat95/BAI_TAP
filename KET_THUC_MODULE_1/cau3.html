@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function soNA(mang) {
+      var nguyenam = ['a','o','e','u','i'];
+      var count = 0;
+      for (let i=0; i<mang.length; i++) {
+          for (let y=0; y<nguyenam.length; y++) {
+              if (mang[i] == nguyenam[y]) {
+                  count++ ;
+              }
+          }
+      }
+      if (count != 0) {
+          document.write(`Số kí tự nguyên âm trong mảng là: ${count}`);
+      } else {
+         return false;
+      }
+  }
+  var tim_chuoi = ['a','f','t','u','o','e','u','m','e','i','u'];
+  soNA(tim_chuoi);
+    </script>
+</body>
+</html>

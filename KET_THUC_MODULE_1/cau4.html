@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 4</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(Name, Weight){
+                this.Name = Name;
+                this.Weight = Weight;
+            }
+            setName(){
+                this.setName = Name;
+            }
+            setWeight(){
+                this.setWeight = Weight;
+            }   
+            getName(){
+                return this.Name;
+            }
+            getWeight(){
+                return this.Weight;
+            }
+            toString(Name,Weight){
+                document.write(`Tên con vật là: ${this.Name}<br>`);
+                document.write(`Cân nặng con vật là: ${this.Weight}<br>`);
+            } 
+        }
+        objAnimal1 = new Animal("Elephant",45.6);
+        objAnimal1.toString();
+        objAnimal2 = new Animal("Mouse",45.6);
+        objAnimal2.toString();
+    </script>
+</body>
+</html>
